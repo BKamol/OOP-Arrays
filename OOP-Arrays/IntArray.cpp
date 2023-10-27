@@ -43,6 +43,7 @@ IntArray::~IntArray()
 
 IntArray& IntArray::operator=(const IntArray& other)
 {
+	if (&other == this) return *this;
 	size = other.size;
 	if (arr != NULL) delete[] arr;
 	arr = new int[size];

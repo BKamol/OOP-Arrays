@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Array.cpp" />
     <ClCompile Include="IntArray.cpp" />
     <ClCompile Include="OOP-Arrays.cpp" />
     <ClCompile Include="RationalArray.cpp" />
     <ClCompile Include="RationalNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Array.h" />
     <ClInclude Include="IntArray.h" />
     <ClInclude Include="RationalArray.h" />
     <ClInclude Include="RationalNumber.h" />
