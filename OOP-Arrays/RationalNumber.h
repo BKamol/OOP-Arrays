@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
+
 using namespace std;
+
 class RationalNumber
 {
 private:
@@ -12,7 +14,7 @@ private:
 
 public:
 	RationalNumber();
-	RationalNumber(int num, int den);
+	RationalNumber(int _num, int _den);
 	RationalNumber(const RationalNumber& x);
 
 	void set(int num, int den);
@@ -22,6 +24,7 @@ public:
 	bool operator==(const RationalNumber& other);
 	RationalNumber operator+(const RationalNumber& other);
 	RationalNumber operator*(const RationalNumber& other);
+	RationalNumber operator*(int n);
 	RationalNumber& operator=(const RationalNumber& other);
 	RationalNumber operator++();
 	RationalNumber operator++(int);
@@ -30,5 +33,4 @@ public:
 	friend istream& operator>>(istream& in, RationalNumber& rn);
 	friend ostream& operator<<(ostream& out, RationalNumber& rn);
 
-	~RationalNumber();
 };

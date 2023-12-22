@@ -27,10 +27,10 @@ RationalNumber::RationalNumber()
     den = 1;
 }
 
-RationalNumber::RationalNumber(int num, int den)
+RationalNumber::RationalNumber(int _num, int _den)
 {
-    this->num = num;
-    this->den = den;
+    this->num = _num;
+    this->den = _den;
 }
 
 RationalNumber::RationalNumber(const RationalNumber& x)
@@ -64,6 +64,12 @@ RationalNumber RationalNumber::operator*(const RationalNumber& other)
     temp.num = num * other.num;
     temp.den = den * other.den;
     return temp;
+}
+
+RationalNumber RationalNumber::operator*(int n)
+{
+    RationalNumber result(num * n, den);
+    return result;
 }
 
 RationalNumber& RationalNumber::operator=(const RationalNumber& other)
@@ -107,8 +113,4 @@ ostream& operator<<(ostream& out, RationalNumber& rn)
     rn.reduce();
     out << rn.get_num() << "/" << rn.get_den() << ' ';
     return out;
-}
-
-RationalNumber::~RationalNumber()
-{
 }

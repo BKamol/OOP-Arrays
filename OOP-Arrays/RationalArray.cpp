@@ -11,6 +11,8 @@ RationalArray::RationalArray(int n)
 {
 	size = n;
 	arr = new RationalNumber[size];
+	for (int i = 0; i < size; i++)
+		arr[i] = RationalNumber(0, 1);
 }
 
 RationalArray::RationalArray(const RationalArray& other)
@@ -78,6 +80,24 @@ RationalArray RationalArray::operator+(const RationalArray& other)
 		array2.arr[i] = other.arr[i] + arr[i];
 	}
 	return array2;
+}
+
+RationalArray RationalArray::operator*(RationalNumber rn)
+{
+	RationalArray result(size);
+	for (int i = 0; i < size; i++)
+	{
+		result.arr[i] = arr[i] * rn;
+	}
+	return result;
+}
+
+void RationalArray::operator+=(const RationalArray& other)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] += other.arr[i];
+	}
 }
 
 istream& operator>>(istream& in, RationalArray& rn)

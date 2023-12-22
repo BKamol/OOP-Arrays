@@ -131,13 +131,17 @@
     <ClCompile Include="IntArray.cpp" />
     <ClCompile Include="OOP-Arrays.cpp" />
     <ClCompile Include="RationalArray.cpp" />
+    <ClCompile Include="RationalMatrix.cpp" />
     <ClCompile Include="RationalNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="IntArray.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="RationalArray.h" />
+    <ClInclude Include="RationalMatrix.h" />
     <ClInclude Include="RationalNumber.h" />
+    <ClInclude Include="SortedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
